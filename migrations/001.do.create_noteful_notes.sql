@@ -3,4 +3,4 @@ CREATE TABLE noteful_notes (
     title TEXT NOT NULL,
     content TEXT,
     date_modified TIMESTAMP DEFAULT now() NOT NULL
-):
+);
