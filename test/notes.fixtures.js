@@ -1,5 +1,5 @@
 function makeNotesArray() {
-  [
+  return [
     {
       id: 1,
       title: 'First test note!',
