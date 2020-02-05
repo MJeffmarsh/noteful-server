@@ -15,16 +15,8 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-}
-
 app.use('/api/notes', notesRouter);
 app.use('/api/folders', foldersRouter);
-
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 app.get('/', (req, res) => {
   res.send('Hello, world!');
